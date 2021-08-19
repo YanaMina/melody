@@ -7,6 +7,7 @@ $(document).ready(function () {
     floorPath.removeClass("current-floor");
     currentFloor = $(this).attr("data-floor");
     $(".counter").text(currentFloor);
+    $(`[data-floor=${currentFloor}]`).toggleClass("current-floor");
   });
 
   counterUp.on("click", function () {
